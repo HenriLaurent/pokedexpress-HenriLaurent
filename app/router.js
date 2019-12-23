@@ -9,4 +9,7 @@ router.get('/', mainController.homePage );
 router.get('/pokemon/:numero', mainController.pokemonPage);
 
 
+//et en dernier, la petite 404 qui fait plaisir
+router.use( mainController.page404 );
+
 module.exports = router;

@@ -46,6 +46,10 @@ const mainController = {
         pokemon: data.rows[0]
       });
     });
+  },
+
+  page404: (req,res) => {
+    res.render('404');
   }
 
 };
