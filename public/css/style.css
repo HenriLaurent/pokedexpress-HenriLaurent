@@ -117,3 +117,9 @@ main div.row--details div.details {
     background-color: white;
     height: 100%;
 }
+
+.details .types .type {
+    margin: 8px;
+    padding: 8px;
+    border-radius: 5px;
+}

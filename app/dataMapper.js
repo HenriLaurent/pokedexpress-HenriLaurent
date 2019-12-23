@@ -15,6 +15,13 @@ const dataMapper = {
   getPokemonDetails: (numero, callback) => {
     const myQuery = `SELECT * FROM pokemon WHERE numero=${numero}`;
     client.query(myQuery, callback);
+  },
+
+  getPokemonTypes: (numero, callback) => {
+    const myQuery = `SELECT * FROM type t 
+    JOIN pokemon_type pt ON t.id = pt.type_id
+    WHERE pt.pokemon_numero=${numero}`;
+    client.query(myQuery, callback);
   }
   
 };

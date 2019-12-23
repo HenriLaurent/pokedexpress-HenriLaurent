@@ -41,9 +41,18 @@ const mainController = {
         console.log(err);
         return res.status(500).send(err);
       }
-
-      res.render('details', {
-        pokemon: data.rows[0]
+      // plutôt que de devoir faire une requête compliquée et de traiter des
+      // résultats tout aussi compliqués, on fait 2 requêtes séparées, 
+      // l'une derrière l'autre.
+      dataMapper.getPokemonTypes(pokemonNum, (err2, data2) => {
+        if (err2) {
+          console.log(err2);
+          return res.status(500).send(err2);
+        }
+        res.render('details', {
+          pokemon: data.rows[0],
+          types: data2.rows
+        });
       });
     });
   },

@@ -9,7 +9,11 @@
     <div class="details">
         <div class="name">#<%= pokemon.numero %>&nbsp;<%= pokemon.nom %></div>
         <div class="types">
-            TODO
+            <% for (let type of types) { %>
+                <span class="type" style="background-color: #<%= type.color %>;">
+                    <%= type.name %>
+                </span>
+            <% } %>
         </div>
         <div class="caption--stats">Statistiques</div>
 
