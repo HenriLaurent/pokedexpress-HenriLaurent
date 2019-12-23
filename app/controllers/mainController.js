@@ -26,6 +26,15 @@ const mainController = {
   },
 
   pokemonPage: (req, res) => {
+    // un objet partagé par toutes les views, qui contient les labels des stats
+    res.locals.statsLabels = {
+      pv: 'PV',
+      attaque: 'Attaque',
+      defense: 'Défense',
+      attaque_spe:'Attaque Spé.',
+      defense_spe:'Défense Spé.',
+      vitesse: 'Vitesse'
+    };
     const pokemonNum = req.params.numero;
     dataMapper.getPokemonDetails(pokemonNum, (err, data) => {
       if (err) {

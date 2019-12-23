@@ -13,6 +13,7 @@ app.set('views', 'app/views');
 // les fichiers statiques
 app.use(express.static('public'));
 
+
 // on fait du routage
 const router = require('./app/router');
 app.use(router);

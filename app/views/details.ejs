@@ -13,53 +13,16 @@
         </div>
         <div class="caption--stats">Statistiques</div>
 
-        <div class="stats">
-            <span class="stats-name">PV</span>
-            <span class="stats-number"><%= pokemon.pv %></span>
-            <div class="stats-base">
-                <div class="stats-percent" style="width:<%= (pokemon.pv/255) *100 %>%"></div>
+        <%# Object.keys est très pratique: il renvoie un array avec les noms des propriétés de l'objet %>
+        <% for(let stat of Object.keys(statsLabels) ) { %>
+            <div class="stats">
+                <span class="stats-name"><%= statsLabels[stat] %></span>
+                <span class="stats-number"><%= pokemon[stat] %></span>
+                <div class="stats-base">
+                    <div class="stats-percent" style="width:<%= (pokemon[stat]/255) *100 %>%"></div>
+                </div>
             </div>
-        </div>
-
-        <div class="stats">
-            <span class="stats-name">Attaque</span>
-            <span class="stats-number"><%= pokemon.attaque %></span>
-            <div class="stats-base">
-                <div class="stats-percent" style="width:<%= (pokemon.attaque/255)*100 %>%"></div>
-            </div>
-        </div>
-
-        <div class="stats">
-            <span class="stats-name">Défense</span>
-            <span class="stats-number"><%= pokemon.defense %></span>
-            <div class="stats-base">
-                <div class="stats-percent" style="width:<%= (pokemon.defense/255)*100 %>%"></div>
-            </div>
-        </div>
-
-        <div class="stats">
-            <span class="stats-name">Attaque Spé.</span>
-            <span class="stats-number"><%= pokemon.attaque_spe %></span>
-            <div class="stats-base">
-                <div class="stats-percent" style="width:<%= (pokemon.attaque_spe/255)*100 %>%"></div>
-            </div>
-        </div>
-
-        <div class="stats">
-            <span class="stats-name">Défense Spé.</span>
-            <span class="stats-number"><%= pokemon.defense_spe %></span>
-            <div class="stats-base">
-                <div class="stats-percent" style="width:<%= (pokemon.defense_spe/255)*100 %>%"></div>
-            </div>
-        </div>
-
-        <div class="stats">
-            <span class="stats-name">Vitesse</span>
-            <span class="stats-number"><%= pokemon.vitesse %></span>
-            <div class="stats-base">
-                <div class="stats-percent" style="width:<%= (pokemon.vitesse/255)*100 %>%"></div>
-            </div>
-        </div>
+        <% } %>
         
     </div>
 
