@@ -34,6 +34,12 @@ const dataMapper = {
     JOIN pokemon_type pt ON p.numero=pt.pokemon_numero
     WHERE pt.type_id=${typeId}`;
     client.query(myQuery, callback);
+  },
+
+  getPokemonByLikeName: (name, callback) => {
+    const myQuery = `SELECT * FROM pokemon
+    WHERE nom ILIKE '%${name}%'`;
+    client.query(myQuery, callback);
   }
   
 };

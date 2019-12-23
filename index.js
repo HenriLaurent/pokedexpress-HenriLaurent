@@ -29,6 +29,12 @@ app.use( (req, res, next) => {
   next();
 });
 
+
+// on rajoute urlencoded (anciennement "body-parser") pour traiter les routes en POST
+app.use(express.urlencoded({
+  extended: true
+}));
+
 // on fait du routage
 const router = require('./app/router');
 app.use(router);

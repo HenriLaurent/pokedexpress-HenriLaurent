@@ -25,9 +25,14 @@ header nav {
     align-items: baseline;
 }
 
-header nav a {
+header nav a,
+header nav form input {
     margin: 5px;
     color: #c13f3f;
+}
+
+header nav form {
+    display: inline-block;
 }
 
 header nav a#home {
