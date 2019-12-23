@@ -4,6 +4,10 @@
     <h1>Détails de <%= pokemon.nom %></h1>
 </div>
 
+<div class="row">
+    <a class="link--add" href="/team/add/<%= pokemon.numero %>">+ Ajouter à mon équipe</a>
+</div>
+
 <div class="row row--details">
     <img src="/img/<%= pokemon.numero %>.png" alt="Illustration de <%= pokemon.nom %>" class="illustration">
     <div class="details">

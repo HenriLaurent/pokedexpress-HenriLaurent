@@ -130,3 +130,12 @@ main div.row--details div.details {
     margin: 5px 0;
     border-radius: 15px;
 }
+
+.link--add {
+    color: violet;
+}
+
+.link--delete {
+    color: violet;
+    font-size: 12px;   
+}
