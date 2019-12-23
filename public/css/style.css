@@ -40,6 +40,12 @@ main {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    text-align: center;
+    color: white;
+}
+
+main div.row {
+    width: 100%;
 }
 
 main div.thumbnail {
@@ -48,10 +54,66 @@ main div.thumbnail {
     background-color: #982b2b;
     border-radius: 15px;
     max-width: 250px;
-    text-align: center;
-    color: white;
 }
 
 main div.thumbnail img {
     width: 100%;
+}
+main h1 {
+    font-size: 25px;
+}
+
+main div.row--details {
+    display: flex;
+}
+
+main div.row--details img {
+    padding: 1%;
+    flex: 2;
+}
+
+main div.row--details div.details {
+    background-color: #aa3738;
+    flex: 3;
+    margin:3%;
+    border-radius: 15px;
+    text-align: left;
+    padding: 0 25px;
+}
+
+.details .name {
+    font-size: 25px;
+    margin: 25px 0;
+}
+
+.details .caption--stats {
+    font-size: 20px;
+    margin: 25px 0;
+}
+
+.stats  {
+    display: flex;
+    margin: 5px 0;
+}
+
+
+.stats .stats-name {
+    flex: 3;
+}
+
+.stats .stats-number {
+    flex :1;
+}
+
+.stats .stats-base {
+    flex: 4;
+    background-color: #632b2a;
+    height: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+} 
+
+.stats .stats-base .stats-percent {
+    background-color: white;
+    height: 100%;
 }

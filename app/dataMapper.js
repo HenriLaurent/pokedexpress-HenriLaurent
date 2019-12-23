@@ -7,9 +7,14 @@ client.connect();
 const dataMapper = {
 
   getAllPokemons: (callback) => {
-    console.log("dans dataMapper.getAllPokemons... on va appeler le callback apres la requete");
+    //console.log("dans dataMapper.getAllPokemons... on va appeler le callback apres la requete");
     
     client.query("SELECT * FROM pokemon;", callback);
+  },
+
+  getPokemonDetails: (numero, callback) => {
+    const myQuery = `SELECT * FROM pokemon WHERE numero=${numero}`;
+    client.query(myQuery, callback);
   }
   
 };

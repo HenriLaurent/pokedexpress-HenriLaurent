@@ -1,0 +1,72 @@
+<%- include('header') %>
+
+<div class="row">
+    <h1>Détails de <%= pokemon.nom %></h1>
+</div>
+
+<div class="row row--details">
+    <img src="/img/<%= pokemon.numero %>.png" alt="Illustration de <%= pokemon.nom %>" class="illustration">
+    <div class="details">
+        <div class="name">#<%= pokemon.numero %>&nbsp;<%= pokemon.nom %></div>
+        <div class="types">
+            TODO
+        </div>
+        <div class="caption--stats">Statistiques</div>
+
+        <div class="stats">
+            <span class="stats-name">PV</span>
+            <span class="stats-number"><%= pokemon.pv %></span>
+            <div class="stats-base">
+                <div class="stats-percent" style="width:<%= (pokemon.pv/255) *100 %>%"></div>
+            </div>
+        </div>
+
+        <div class="stats">
+            <span class="stats-name">Attaque</span>
+            <span class="stats-number"><%= pokemon.attaque %></span>
+            <div class="stats-base">
+                <div class="stats-percent" style="width:<%= (pokemon.attaque/255)*100 %>%"></div>
+            </div>
+        </div>
+
+        <div class="stats">
+            <span class="stats-name">Défense</span>
+            <span class="stats-number"><%= pokemon.defense %></span>
+            <div class="stats-base">
+                <div class="stats-percent" style="width:<%= (pokemon.defense/255)*100 %>%"></div>
+            </div>
+        </div>
+
+        <div class="stats">
+            <span class="stats-name">Attaque Spé.</span>
+            <span class="stats-number"><%= pokemon.attaque_spe %></span>
+            <div class="stats-base">
+                <div class="stats-percent" style="width:<%= (pokemon.attaque_spe/255)*100 %>%"></div>
+            </div>
+        </div>
+
+        <div class="stats">
+            <span class="stats-name">Défense Spé.</span>
+            <span class="stats-number"><%= pokemon.defense_spe %></span>
+            <div class="stats-base">
+                <div class="stats-percent" style="width:<%= (pokemon.defense_spe/255)*100 %>%"></div>
+            </div>
+        </div>
+
+        <div class="stats">
+            <span class="stats-name">Vitesse</span>
+            <span class="stats-number"><%= pokemon.vitesse %></span>
+            <div class="stats-base">
+                <div class="stats-percent" style="width:<%= (pokemon.vitesse/255)*100 %>%"></div>
+            </div>
+        </div>
+        
+    </div>
+
+</div>
+
+<div class="row">
+    <a href="/">Revenir à la liste</a>
+</div>
+
+<%- include('footer') %>
