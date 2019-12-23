@@ -22,6 +22,11 @@ const dataMapper = {
     JOIN pokemon_type pt ON t.id = pt.type_id
     WHERE pt.pokemon_numero=${numero}`;
     client.query(myQuery, callback);
+  },
+
+  getAllTypes: (callback) => {
+    const myQuery = "SELECT * FROM type";
+    client.query(myQuery, callback);
   }
   
 };

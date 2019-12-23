@@ -123,3 +123,10 @@ main div.row--details div.details {
     padding: 8px;
     border-radius: 5px;
 }
+
+.link--type {
+    padding: 25px;
+    min-width: 20%;
+    margin: 5px 0;
+    border-radius: 15px;
+}
