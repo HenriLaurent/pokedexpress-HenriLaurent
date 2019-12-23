@@ -1,0 +1,54 @@
+body {
+    background-color: #c13f3f;
+    font-family: 'Bree Serif', serif;
+}
+
+/* HEADER */
+header {
+    background-color: white;
+    margin: 15px;
+    border-radius: 15px;
+}
+
+header nav {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+header nav a {
+    text-decoration: none;
+    margin: 5px;
+    color: #c13f3f;
+}
+
+header nav a:visited {
+    text-decoration: none;
+}
+
+header nav a#home {
+    font-size: 20px;
+}
+
+/* MAIN */
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+main div.thumbnail {
+    margin: 10px;
+    padding: 10px;
+    background-color: #982b2b;
+    border-radius: 15px;
+    max-width: 250px;
+    text-align: center;
+    color: white;
+}
+
+main div.thumbnail img {
+    width: 100%;
+}

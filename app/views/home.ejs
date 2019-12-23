@@ -1,18 +1,10 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8">
+<%- include('header') %>
+    
+  <% for(let pokemon of pokemons) { %>
+    <div class="thumbnail">
+      <img src="/img/<%= pokemon.numero %>.png" alt="Illustration de <%= pokemon.nom %>">
+      <span><%= pokemon.nom %></span>
+    </div>
+  <% } %>
 
-  <title>Pokedex</title>
-</head>
-<body>
-  <h1>Bonjour</h1>
-
-  <ul>
-    <% for(let pokemon of pokemons) { %>
-      <li><%= pokemon.numero %> : <%= pokemon.nom %></li>
-    <% } %>
-  </ul>
-
-</body>
-</html>
+<%- include('footer') %>
