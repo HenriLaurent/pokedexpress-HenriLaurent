@@ -13,15 +13,17 @@ const dataMapper = {
   },
 
   getPokemonDetails: (numero, callback) => {
-    const myQuery = `SELECT * FROM pokemon WHERE numero=${numero}`;
-    client.query(myQuery, callback);
+    const myQuery = `SELECT * FROM pokemon WHERE numero=$1`;
+    const values = [numero];
+    client.query(myQuery, numero, callback);
   },
 
   getPokemonTypes: (numero, callback) => {
     const myQuery = `SELECT * FROM type t 
     JOIN pokemon_type pt ON t.id = pt.type_id
-    WHERE pt.pokemon_numero=${numero}`;
-    client.query(myQuery, callback);
+    WHERE pt.pokemon_numero=$1`;
+    const values = [numero];
+    client.query(myQuery, numero, callback);
   },
 
   getAllTypes: (callback) => {
@@ -32,14 +34,16 @@ const dataMapper = {
   getPokemonsByType: (typeId, callback) => {
     const myQuery = `SELECT * FROM pokemon p
     JOIN pokemon_type pt ON p.numero=pt.pokemon_numero
-    WHERE pt.type_id=${typeId}`;
-    client.query(myQuery, callback);
+    WHERE pt.type_id=$1`;
+    const values = [typeId];
+    client.query(myQuery, values, callback);
   },
 
   getPokemonByLikeName: (name, callback) => {
     const myQuery = `SELECT * FROM pokemon
-    WHERE nom ILIKE '%${name}%'`;
-    client.query(myQuery, callback);
+    WHERE nom ILIKE $1`;
+    const values = [`%${name}%`];
+    client.query(myQuery, values, callback);
   }
   
 };

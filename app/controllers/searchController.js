@@ -2,7 +2,7 @@ const dataMapper = require('../dataMapper');
 
 const searchController = {
     searchResults: (req, res) => {
-        console.log(req.body);
+        //console.log(req.body);
         const searchedName = req.body.nom;
         dataMapper.getPokemonByLikeName(searchedName, (err, data) => {
             if (err) {
